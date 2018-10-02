@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Wall
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - BG
+  - Heroes
+  - Platforms
+  - Exit
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Hidden
+    uniqueID: 2770118805
+    locked: 0
+  - name: BG
+    uniqueID: 416924441
+    locked: 0
+  - name: middle
+    uniqueID: 3487136271
+    locked: 0
+  - name: Platforms
+    uniqueID: 4163883321
+    locked: 0
+  - name: Exit
+    uniqueID: 1312544241
+    locked: 0
+  - name: Heroes
+    uniqueID: 3620963653
+    locked: 0
+  - name: FG
+    uniqueID: 3299338177
+    locked: 0
