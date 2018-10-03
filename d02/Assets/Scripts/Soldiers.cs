@@ -28,6 +28,8 @@ public class Soldiers : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		transform.position = new Vector3(-3.6f, 2.25f, 0f);
+		// transform.position(new Vector3(-3.6f + Random.Range(-1f, 1f), 2.25f + Random.Range(-1f, 1f), 0));
 		speed = 2f;
 		animator = GetComponent<Animator>();
 		animator.SetFloat("y", -1.0f);
@@ -64,6 +66,6 @@ public class Soldiers : MonoBehaviour {
 
 	void OnMouseDown() {
 		Audio_Manager.instance.set_music(selected);
-		Soldiers_Manager.instance.set_soldier(this);
+		Soldiers_Manager.instance.add_soldier(this);
 	}
 }

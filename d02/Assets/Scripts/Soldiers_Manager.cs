@@ -11,11 +11,17 @@ public class Soldiers_Manager : MonoBehaviour {
 		instance = this;
 	}
 
-	public void set_soldier(Soldiers _soldier) {
+	public void add_soldier(Soldiers _soldier) {
 		Debug.Log("Soldier set in manager");
 		soldiers.Add(_soldier);
 	}
 	
+	void pop_soldiers() {
+		Debug.Log("Soldier set in manager");
+		// soldiers.Pop(_soldier);
+		soldiers.Clear();
+	}
+
 	void Update() {
 
 	}
@@ -28,6 +34,7 @@ public class Soldiers_Manager : MonoBehaviour {
 			{
 				soldier.Set_direction(new Vector2(click_pos.x, click_pos.y));
 			}
+			pop_soldiers();
 		}
 	}
 }
