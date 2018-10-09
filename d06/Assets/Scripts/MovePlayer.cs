@@ -48,4 +48,6 @@ public class MovePlayer : MonoBehaviour {
 		// }
 		cc.Move(forward * Time.deltaTime);
 	}
+
+
 }

@@ -15,7 +15,11 @@ public class CCTV : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		// Debug.Log("Salut");
-		
+		SliderControl.sld.playerVisible++;
+	}
+
+	void OnTriggerExit(Collider other)
+	{
+		SliderControl.sld.playerVisible--;
 	}
 }
