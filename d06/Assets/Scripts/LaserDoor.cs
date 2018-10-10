@@ -6,6 +6,6 @@ public class LaserDoor : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		GameManager.gm.Gameover();
+		GameManager.gm.Gameover("You loose ! You have been spotted !");
 	}
 }
