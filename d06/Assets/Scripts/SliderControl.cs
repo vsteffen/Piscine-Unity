@@ -18,7 +18,7 @@ public class SliderControl : MonoBehaviour
 
     public void Update() {
         if (playerVisible > 0 && slider.value < 1f)
-            slider.value += Time.deltaTime * 0.4f;
+            slider.value += Time.deltaTime * 0.6f;
         else if (playerVisible == 0 && slider.value > 0f)
             slider.value -= Time.deltaTime * 0.1f;
     }
