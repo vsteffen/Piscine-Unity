@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - player
+  - weapon
+  - enemy
+  - checkpoint
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - weapon
+  - weapon sound
+  - Enemy
+  - View
+  - Wall
+  - Room
+  - Bullet
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: decor
+    uniqueID: 3055170387
+    locked: 0
+  - name: obstacle
+    uniqueID: 3658281183
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: characters
+    uniqueID: 3931212657
+    locked: 0
+  - name: UI
+    uniqueID: 2554101503
+    locked: 0
+  - name: UI Pause
+    uniqueID: 2499362547
+    locked: 0
