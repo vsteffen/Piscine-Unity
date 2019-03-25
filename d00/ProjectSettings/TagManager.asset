@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Strings
+    uniqueID: 1471141167
+    locked: 0
+  - name: Keys
+    uniqueID: 1265030389
+    locked: 0

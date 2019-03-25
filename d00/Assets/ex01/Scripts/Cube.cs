@@ -5,21 +5,24 @@ using UnityEngine;
 public class Cube : MonoBehaviour {
 	private float	speed;
 
-	public KeyCode key;
+	public KeyCode		key;
 
 	// Use this for initialization
 	void Start () {
-		speed = Random.Range(8f, 12f);
+		speed = Random.Range(7f, 13f);
 	}
 	
 	void die() {
+		float dist = (-4.0f - transform.position.y);
+		if (dist < 0)
+			dist = -dist;
+		Debug.Log("Precision: " + dist);
 		GameObject.Destroy(this.gameObject);
-		Debug.Log("Precision: " + (4.2f + transform.position.y));
 	}
 
 	void miss() {
-		GameObject.Destroy(this.gameObject);
 		Debug.Log("Miss cube!");
+		GameObject.Destroy(this.gameObject);
 	}
 
 	// Update is called once per frame
@@ -31,7 +34,7 @@ public class Cube : MonoBehaviour {
 			die();
 		else if (Input.GetKeyDown(KeyCode.D) && key == KeyCode.D)
 			die();
-		else if (transform.position.y < -4.2f)
+		else if (transform.position.y < -6f)
 			miss();
 	}
 }
