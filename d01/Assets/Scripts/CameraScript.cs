@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class CameraScript : MonoBehaviour {
@@ -16,15 +17,15 @@ public class CameraScript : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Keypad1))
+		if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Alpha1))
 		{
 			player = thomas;
 		}
-		else if (Input.GetKeyDown(KeyCode.Keypad2))
+		else if (Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Alpha2))
 		{
 			player = john;
 		}
-		else if (Input.GetKeyDown(KeyCode.Keypad3))
+		else if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Alpha3))
 		{
 			player = claire;
 		}
@@ -32,7 +33,7 @@ public class CameraScript : MonoBehaviour {
 		offset_y = player.transform.position.y;
 		if (Input.GetKeyDown(KeyCode.R))
 		{
-			transform.position = initial_pos;
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
 	}
 

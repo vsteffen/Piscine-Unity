@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Ground
   - Wall
+  - 1
+  - 2
+  - 3
+  - all
   layers:
   - Default
   - TransparentFX
@@ -19,12 +23,12 @@ TagManager:
   - Heroes
   - Platforms
   - Exit
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Platforms_1
+  - Platforms_2
+  - Platforms_3
+  - Hero_1
+  - Hero_2
+  - Hero_3
   - 
   - 
   - 

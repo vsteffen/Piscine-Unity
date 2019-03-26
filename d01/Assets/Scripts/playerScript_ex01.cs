@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerScript_ex00 : MonoBehaviour {
+public class playerScript_ex01 : MonoBehaviour {
 	private Vector3			initial_pos;
 	public int				id;
 	private int				id_use;
@@ -75,8 +75,11 @@ public class playerScript_ex00 : MonoBehaviour {
 			else
 				rb.velocity = new Vector2(0, rb.velocity.y);
 		}
-		if (Input.GetKeyDown(KeyCode.R))
+		if (transform.position.y < -12f)
+		{
 			transform.position = initial_pos;
+			rb.velocity = new Vector2(0, 0);
+		}
 	}
 
 	 void OnCollisionEnter2D(Collision2D collision) {
@@ -92,9 +95,9 @@ public class playerScript_ex00 : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collision) {
 		if (id > 10)
 		{
-			if (LayerMask.LayerToName(collision.gameObject.layer) == "Platforms")
+			if (collision.gameObject.CompareTag("Player") || LayerMask.LayerToName(collision.gameObject.layer) == "Platforms" || collision.gameObject.CompareTag("" + (id - 10)))
 			{
-				playerScript_ex00 parent = this.transform.parent.GetComponent<playerScript_ex00>();
+				playerScript_ex01 parent = this.transform.parent.GetComponent<playerScript_ex01>();
 				parent.grounds++;
 				parent.grounded = true;
 			}
@@ -104,9 +107,9 @@ public class playerScript_ex00 : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D collision) {
 		if (id > 10)
 		{
-			if (LayerMask.LayerToName(collision.gameObject.layer) == "Platforms")
+			if (collision.gameObject.CompareTag("Player") || LayerMask.LayerToName(collision.gameObject.layer) == "Platforms" || collision.gameObject.CompareTag("" + (id - 10)))
 			{
-				playerScript_ex00 parent = this.transform.parent.GetComponent<playerScript_ex00>();
+				playerScript_ex01 parent = this.transform.parent.GetComponent<playerScript_ex01>();
 				parent.grounds--;
 				if (parent.grounds < 1)
 					parent.grounded = false;

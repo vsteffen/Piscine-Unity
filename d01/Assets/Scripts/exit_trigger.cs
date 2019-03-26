@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class exit_trigger : MonoBehaviour {
@@ -11,16 +12,22 @@ public class exit_trigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
-		if (id == collider.gameObject.GetComponent<playerScript_ex00>().id)
+		if (id == collider.gameObject.GetComponent<playerScript_ex01>().id)
 		{
 			correct_cube++;
 			if (correct_cube == 3)
-				Debug.Log("You won!");
+			{
+				Scene actualScene = SceneManager.GetActiveScene();
+				if (actualScene.name == "ex02")
+					SceneManager.LoadScene("Scenes/ex02_01");
+				else
+					Debug.Log("You won!");
+			}
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D collider) {
-		if (id == collider.gameObject.GetComponent<playerScript_ex00>().id)
+		if (id == collider.gameObject.GetComponent<playerScript_ex01>().id)
 		{
 			correct_cube--;
 		}
