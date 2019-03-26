@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 3356970111
+    locked: 0
+  - name: Floor
+    uniqueID: 3030509379
+    locked: 0
   - name: Strings
     uniqueID: 1471141167
     locked: 0
