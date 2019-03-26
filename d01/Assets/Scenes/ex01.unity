@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 101126297}
   - component: {fileID: 101126296}
   - component: {fileID: 101126299}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: yellow
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &101126297
 BoxCollider2D:
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 642226327}
   - component: {fileID: 642226326}
   - component: {fileID: 642226328}
-  m_Layer: 10
+  m_Layer: 18
   m_Name: PlatformWhiteSprite (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,7 +594,7 @@ GameObject:
   - component: {fileID: 819086663}
   - component: {fileID: 819086662}
   - component: {fileID: 819086665}
-  m_Layer: 10
+  m_Layer: 15
   m_Name: red
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -677,7 +677,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &819086663
 BoxCollider2D:
@@ -846,7 +846,7 @@ GameObject:
   - component: {fileID: 1052925423}
   - component: {fileID: 1052925424}
   - component: {fileID: 1052925426}
-  m_Layer: 10
+  m_Layer: 17
   m_Name: blue
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -929,7 +929,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &1052925424
 BoxCollider2D:
@@ -973,7 +973,7 @@ MonoBehaviour:
     m_Bits: 0
   grounded: 0
   grounds: 0
-  speed: 0.8
+  speed: 0.9
 --- !u!1 &1118760897
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,7 +985,7 @@ GameObject:
   - component: {fileID: 1118760901}
   - component: {fileID: 1118760900}
   - component: {fileID: 1118760902}
-  m_Layer: 10
+  m_Layer: 18
   m_Name: PlatformWhiteSprite (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1880,7 +1880,7 @@ GameObject:
   - component: {fileID: 1825863870}
   - component: {fileID: 1825863869}
   - component: {fileID: 1825863871}
-  m_Layer: 10
+  m_Layer: 18
   m_Name: PlatformWhiteSprite (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

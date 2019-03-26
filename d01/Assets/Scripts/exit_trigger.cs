@@ -20,6 +20,10 @@ public class exit_trigger : MonoBehaviour {
 				Scene actualScene = SceneManager.GetActiveScene();
 				if (actualScene.name == "ex02")
 					SceneManager.LoadScene("Scenes/ex02_01");
+				else if (actualScene.name == "ex03")
+					SceneManager.LoadScene("Scenes/ex03_01");
+				else if (actualScene.name == "ex03_01")
+					SceneManager.LoadScene("Scenes/ex03_02");
 				else
 					Debug.Log("You won!");
 			}

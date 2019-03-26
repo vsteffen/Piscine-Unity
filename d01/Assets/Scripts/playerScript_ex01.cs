@@ -19,11 +19,11 @@ public class playerScript_ex01 : MonoBehaviour {
 		grounds = 0;
 	}
 	
-	void Update () {
+	void FixedUpdate () {
 		if (id > 10)
 			return ;
 		if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Alpha1))
-		{
+		{	
 			id_use = 1;
 			if (id == 1)
 			{
@@ -31,7 +31,7 @@ public class playerScript_ex01 : MonoBehaviour {
 				rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 			}
 			else
-				rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+				rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 		}
 		else if (Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Alpha2))
 		{
@@ -42,7 +42,7 @@ public class playerScript_ex01 : MonoBehaviour {
 				rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 			}
 			else
-				rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+				rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 		}
 		else if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Alpha3))
 		{
@@ -53,7 +53,7 @@ public class playerScript_ex01 : MonoBehaviour {
 				rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 			}
 			else
-				rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+				rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 		}
 		if (id_use == id)
 		{
@@ -88,7 +88,7 @@ public class playerScript_ex01 : MonoBehaviour {
 		if (collision.gameObject.CompareTag("Player"))
 		{
 			if (id_use != id)
-				rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+				rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
 		}
 	 }
 
@@ -96,7 +96,7 @@ public class playerScript_ex01 : MonoBehaviour {
 		if (id > 10)
 		{
 			if (collision.gameObject.CompareTag("Player") || LayerMask.LayerToName(collision.gameObject.layer) == "Platforms" || collision.gameObject.CompareTag("" + (id - 10)))
-			{
+			{				
 				playerScript_ex01 parent = this.transform.parent.GetComponent<playerScript_ex01>();
 				parent.grounds++;
 				parent.grounded = true;
@@ -109,6 +109,7 @@ public class playerScript_ex01 : MonoBehaviour {
 		{
 			if (collision.gameObject.CompareTag("Player") || LayerMask.LayerToName(collision.gameObject.layer) == "Platforms" || collision.gameObject.CompareTag("" + (id - 10)))
 			{
+				
 				playerScript_ex01 parent = this.transform.parent.GetComponent<playerScript_ex01>();
 				parent.grounds--;
 				if (parent.grounds < 1)

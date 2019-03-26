@@ -19,7 +19,7 @@ public class playerScript_ex00 : MonoBehaviour {
 		grounds = 0;
 	}
 	
-	void Update () {
+	void FixedUpdate () {
 		if (id > 10)
 			return ;
 		if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Alpha1))
@@ -85,15 +85,15 @@ public class playerScript_ex00 : MonoBehaviour {
 		if (collision.gameObject.CompareTag("Player"))
 		{
 			if (id_use != id)
-				rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+				rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
 		}
 	 }
 
 	void OnTriggerEnter2D(Collider2D collision) {
 		if (id > 10)
 		{
-			if (LayerMask.LayerToName(collision.gameObject.layer) == "Platforms")
-			{
+			if (collision.gameObject.CompareTag("Player") || LayerMask.LayerToName(collision.gameObject.layer) == "Platforms" || collision.gameObject.CompareTag("" + (id - 10)))
+			{				
 				playerScript_ex00 parent = this.transform.parent.GetComponent<playerScript_ex00>();
 				parent.grounds++;
 				parent.grounded = true;
@@ -104,8 +104,9 @@ public class playerScript_ex00 : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D collision) {
 		if (id > 10)
 		{
-			if (LayerMask.LayerToName(collision.gameObject.layer) == "Platforms")
+			if (collision.gameObject.CompareTag("Player") || LayerMask.LayerToName(collision.gameObject.layer) == "Platforms" || collision.gameObject.CompareTag("" + (id - 10)))
 			{
+				
 				playerScript_ex00 parent = this.transform.parent.GetComponent<playerScript_ex00>();
 				parent.grounds--;
 				if (parent.grounds < 1)

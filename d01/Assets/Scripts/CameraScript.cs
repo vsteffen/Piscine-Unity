@@ -16,7 +16,7 @@ public class CameraScript : MonoBehaviour {
 		initial_pos = transform.position;
 	}
 
-	void Update () {
+	void FixedUpdate () {
 		if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Alpha1))
 		{
 			player = thomas;
