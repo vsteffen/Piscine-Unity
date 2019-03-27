@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Tile
+  - Soldier
+  - Map
+  - Orc
   layers:
   - Default
   - TransparentFX
@@ -13,10 +17,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Soldiers
+  - Map
+  - Village
+  - Orcs
   - 
   - 
   - 
@@ -40,4 +44,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Map
+    uniqueID: 2790805593
+    locked: 0
+  - name: Village
+    uniqueID: 1105186271
+    locked: 0
+  - name: Orcs
+    uniqueID: 1831753693
+    locked: 0
+  - name: Soldiers
+    uniqueID: 611759093
     locked: 0

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Soldiers_Spawner : MonoBehaviour {
-	public Soldiers		soldier;
+public class Orcs_Spawner : MonoBehaviour {
+	public Orcs			orc;
 	private float 		elapsed;
 	private bool 		firstTime;
 
@@ -16,14 +16,14 @@ public class Soldiers_Spawner : MonoBehaviour {
 	void Update () {
 		if (firstTime)
 		{
-			GameObject.Instantiate(soldier);
+			GameObject.Instantiate(orc);
 			firstTime = false;
 		}
 		elapsed += Time.deltaTime;
 		if (elapsed >= 10f)
 		{
         	elapsed = elapsed % 10f;
-			GameObject.Instantiate(soldier);
+			GameObject.Instantiate(orc);
 		}
 	}
 }
