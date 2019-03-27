@@ -15,7 +15,7 @@ public class Portail : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
-		if (collider.gameObject.CompareTag("Player")) {
+		if (son && collider.gameObject.CompareTag("Player")) {
 			collider.gameObject.transform.position = son.transform.position;
 		}
 

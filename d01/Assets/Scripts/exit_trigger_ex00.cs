@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class exit_trigger : MonoBehaviour {
+public class exit_trigger_ex00 : MonoBehaviour {
 	public int			id;
 	private static int	correct_cube;
 
@@ -12,7 +12,7 @@ public class exit_trigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
-		if (id == collider.gameObject.GetComponent<playerScript_ex01>().id)
+		if (id == collider.gameObject.GetComponent<playerScript_ex00>().id)
 		{
 			correct_cube++;
 			if (correct_cube == 3)
@@ -37,7 +37,7 @@ public class exit_trigger : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D(Collider2D collider) {
-		if (id == collider.gameObject.GetComponent<playerScript_ex01>().id)
+		if (id == collider.gameObject.GetComponent<playerScript_ex00>().id)
 		{
 			correct_cube--;
 		}
