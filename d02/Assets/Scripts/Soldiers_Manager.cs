@@ -16,20 +16,17 @@ public class Soldiers_Manager : MonoBehaviour {
 		{
 			if (soldiers.IndexOf(_soldier) < 0)
 			{
-				// Debug.Log("Soldier set in manager");
 				soldiers.Add(_soldier);
 			}
 		}
 		else
 		{
 			pop_soldiers();
-			// Debug.Log("Soldier set in manager");
 			soldiers.Add(_soldier);
 		}
 	}
 	
 	public void pop_soldiers() {
-		// Debug.Log("Cleaned list of Soldiers");
 		soldiers.Clear();
 	}
 
@@ -39,11 +36,19 @@ public class Soldiers_Manager : MonoBehaviour {
 			Vector3 click_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			foreach (Soldiers soldier in soldiers)
 			{
-				soldier.Set_direction(new Vector2(click_pos.x, click_pos.y));
 				if (target)
 				{
-					Debug.Log(target);
-					soldier.setEnemy(target);
+					Orcs actual_target = soldier.getEnemy();
+					if (!actual_target || target.gameObject != actual_target.gameObject)
+					{
+						soldier.setEnemy(target);
+						soldier.Set_direction(new Vector2(click_pos.x, click_pos.y), true);
+					}
+				}
+				else
+				{
+					soldier.Set_direction(new Vector2(click_pos.x, click_pos.y), true);
+					soldier.setEnemy(null);
 				}
 			}
 		}

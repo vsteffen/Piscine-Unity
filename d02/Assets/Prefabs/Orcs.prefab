@@ -9,20 +9,20 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1680125715040134}
+  m_RootGameObject: {fileID: 1919321255494318}
   m_IsPrefabParent: 1
---- !u!1 &1680125715040134
+--- !u!1 &1919321255494318
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4392719321206014}
-  - component: {fileID: 212213869776663080}
-  - component: {fileID: 114944173188968650}
-  - component: {fileID: 61303657019478836}
-  - component: {fileID: 50219206203906354}
+  - component: {fileID: 4410656867701262}
+  - component: {fileID: 212686048517430586}
+  - component: {fileID: 114167867710236350}
+  - component: {fileID: 61796289888491492}
+  - component: {fileID: 50971529000301828}
   m_Layer: 8
   m_Name: Orcs
   m_TagString: Orc
@@ -30,12 +30,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4392719321206014
+--- !u!4 &4410656867701262
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1680125715040134}
+  m_GameObject: {fileID: 1919321255494318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -43,13 +43,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50219206203906354
+--- !u!50 &50971529000301828
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1680125715040134}
+  m_GameObject: {fileID: 1919321255494318}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -63,19 +63,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61303657019478836
+--- !u!61 &61796289888491492
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1680125715040134}
+  m_GameObject: {fileID: 1919321255494318}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.015966535, y: -0.013305664}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -86,14 +86,14 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.59375, y: 0.671875}
+  m_Size: {x: 0.77470386, y: 0.8687954}
   m_EdgeRadius: 0
---- !u!114 &114944173188968650
+--- !u!114 &114167867710236350
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1680125715040134}
+  m_GameObject: {fileID: 1919321255494318}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ae514bb44b4d4720ab7c6d9627f3f92, type: 3}
@@ -103,15 +103,19 @@ MonoBehaviour:
   selected: {fileID: 8300000, guid: b0b4133aa054043d4935cddb06a23377, type: 3}
   walk: {fileID: 8300000, guid: ccbee47ab1a9b409baa83b25fe4c1cc0, type: 3}
   attack: {fileID: 8300000, guid: e0e9c7014ff3b4236b653234552ce8ff, type: 3}
+  death: {fileID: 8300000, guid: ecc6df5e38e6b4fcb93c0ba729d9e42d, type: 3}
+  building: 0
+  building_hq: 0
+  life_max: 80
   life: 80
   attack_dmg: 10
   attack_speed: 1
---- !u!212 &212213869776663080
+--- !u!212 &212686048517430586
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1680125715040134}
+  m_GameObject: {fileID: 1919321255494318}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
