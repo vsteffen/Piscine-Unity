@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager	gm;
+	public Light				alerte_light;
 	public ParticleSystem		fanParticle;
 	public TextUI				textUI;
 	public bool					passKey;
@@ -19,6 +20,8 @@ public class GameManager : MonoBehaviour {
 		passKey = false;
 		camWinLoose.enabled = false;
 		gameover = false;
+		Cursor.visible = false;
+		StartCoroutine(InitBeginMsg());
 	}
 
 	public void Gameover(string msg) {
@@ -26,9 +29,18 @@ public class GameManager : MonoBehaviour {
         camWinLoose.enabled = !camWinLoose.enabled;
 		SliderControl.sld.gameObject.SetActive(false);
 		GameManager.gm.DisplayMsg(msg);
+		alerte_light.GetComponent<Light>().enabled = true;
+		alerte_light.GetComponent<Light>().intensity = 5f;		
 		StartCoroutine(waitWinLooseScreen());
 	}
- 
+
+	IEnumerator InitBeginMsg() {
+		DisplayMsg("Find a way to exit this building ! Try to find all documents !");
+        yield return new WaitForSeconds(3);
+		RemoveMsg("Find a way to exit this building ! Try to find all documents !");
+     }
+
+
      IEnumerator waitWinLooseScreen() {
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene("Scenes/d06");

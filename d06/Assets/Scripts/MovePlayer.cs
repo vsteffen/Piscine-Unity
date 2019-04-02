@@ -27,25 +27,19 @@ public class MovePlayer : MonoBehaviour {
         transform.Rotate(0, newRotationY, 0);
     }
 
-	// Update is called once per frame
 	void Update () {
 		followMouse();
 		moveVec.z = Input.GetAxis("Vertical");
 		moveVec.y = 0;
 		moveVec.x = Input.GetAxis("Horizontal");
 		Vector3 forward = transform.TransformDirection(moveVec);
-		forward *= speed;
+		if (Input.GetKey(KeyCode.LeftShift)) {
+			forward *= speed;
+			SliderControl.sld.slider.value += Time.deltaTime * 0.3f;
+		}
+		else
+			forward *= speed / 3;
 		forward.y = -9.81f;
-		// if ((forward.x != 0 || forward.z != 0) && !_running && _runningNow) {
-		// 	_moving = true;
-		// 	AudioManager.instance.footsteps.Play();
-		// 	_running = true;
-		// }
-		// if ((forward.x == 0 && forward.z == 0) && _moving) {
-		// 	_moving = false;
-		// 	_running = false;
-		// 	AudioManager.instance.footsteps.Stop();
-		// }
 		cc.Move(forward * Time.deltaTime);
 	}
 

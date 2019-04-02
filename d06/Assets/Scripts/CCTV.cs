@@ -15,6 +15,7 @@ public class CCTV : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
+		Debug.Log("HEY TOI !");
 		SliderControl.sld.playerVisible++;
 	}
 

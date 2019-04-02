@@ -12,7 +12,7 @@ public class Interactions : MonoBehaviour {
 	private bool			used;
 
 	private void OnTriggerEnter(Collider other) {
-		if (id == 0 || id == 1)
+		if (id == 0 || id == 1 || id == 4)
 		{
 			if (!used)
 				GameManager.gm.DisplayMsg(msg);
@@ -45,6 +45,7 @@ public class Interactions : MonoBehaviour {
 			}
 			else if (id == 1)
 			{
+				used = true;
 				thing.SetActive(false);
 				GameManager.gm.RemoveMsg(msg);
 				GameManager.gm.passKey = true;
@@ -52,10 +53,16 @@ public class Interactions : MonoBehaviour {
 			else if (id == 2 && GameManager.gm.passKey)
 			{
 				used = true;
+				thing.gameObject.GetComponent<TranslatePos>().SetPos(new Vector3(14.63f, 1.266f, 1.943f));
 				GameManager.gm.RemoveMsg(msg);
 			}
 			else if (id == 3)
 				GameManager.gm.Gameover("You win ! Congratulations !");
+			else if (id == 4) {
+				used = true;
+				thing.SetActive(false);
+				GameManager.gm.RemoveMsg(msg);
+			}
 		}
 	}
 
