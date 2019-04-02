@@ -33,7 +33,7 @@ public class MovePlayer : MonoBehaviour {
 		moveVec.y = 0;
 		moveVec.x = Input.GetAxis("Horizontal");
 		Vector3 forward = transform.TransformDirection(moveVec);
-		if (Input.GetKey(KeyCode.LeftShift)) {
+		if (Input.GetKey(KeyCode.LeftShift) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))) {
 			forward *= speed;
 			SliderControl.sld.slider.value += Time.deltaTime * 0.3f;
 		}
