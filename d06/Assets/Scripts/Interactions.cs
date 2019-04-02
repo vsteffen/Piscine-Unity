@@ -49,12 +49,14 @@ public class Interactions : MonoBehaviour {
 				thing.SetActive(false);
 				GameManager.gm.RemoveMsg(msg);
 				GameManager.gm.passKey = true;
+				GameManager.gm.SetMusic(3, false);
 			}
 			else if (id == 2 && GameManager.gm.passKey)
 			{
 				used = true;
 				thing.gameObject.GetComponent<TranslatePos>().SetPos(new Vector3(14.63f, 1.266f, 1.943f));
 				GameManager.gm.RemoveMsg(msg);
+				GameManager.gm.SetMusic(3, true);
 			}
 			else if (id == 3)
 				GameManager.gm.Gameover("You win ! Congratulations !");
@@ -62,6 +64,7 @@ public class Interactions : MonoBehaviour {
 				used = true;
 				thing.SetActive(false);
 				GameManager.gm.RemoveMsg(msg);
+				GameManager.gm.SetMusic(3, false);
 			}
 		}
 	}

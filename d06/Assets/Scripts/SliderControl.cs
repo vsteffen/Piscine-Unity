@@ -21,5 +21,9 @@ public class SliderControl : MonoBehaviour
             slider.value += Time.deltaTime * 0.6f;
         else if (playerVisible == 0 && slider.value > 0f)
             slider.value -= Time.deltaTime * 0.1f;
+        if (slider.value >= 0.75f)
+            GameManager.gm.SetMusic(0, true);
+        else
+            GameManager.gm.SetMusic(0, false);
     }
 }

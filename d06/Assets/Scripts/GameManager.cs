@@ -14,9 +14,19 @@ public class GameManager : MonoBehaviour {
 	public Camera				camWinLoose;
 	private bool				gameover;
 
+	public AudioSource[] 			audio;
+	public AudioClip				run;
+	public AudioClip				normal;
+	public AudioClip				alarm;
+	public AudioClip				end;
+	public AudioClip				pick;
+	public AudioClip				door;
+	private bool[]					music_playing = new bool[5];
+
 	void Start() {
 		gm = this;
 		fanParticle.GetComponent<ParticleSystem>().Stop();
+		audio = GetComponents<AudioSource>();
 		passKey = false;
 		camWinLoose.enabled = false;
 		gameover = false;
@@ -30,7 +40,8 @@ public class GameManager : MonoBehaviour {
 		SliderControl.sld.gameObject.SetActive(false);
 		GameManager.gm.DisplayMsg(msg);
 		alerte_light.GetComponent<Light>().enabled = true;
-		alerte_light.GetComponent<Light>().intensity = 5f;		
+		alerte_light.GetComponent<Light>().intensity = 5f;
+		SetMusic(2, true);	
 		StartCoroutine(waitWinLooseScreen());
 	}
 
@@ -42,7 +53,7 @@ public class GameManager : MonoBehaviour {
 
 
      IEnumerator waitWinLooseScreen() {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         SceneManager.LoadScene("Scenes/d06");
      }
 
@@ -61,5 +72,36 @@ public class GameManager : MonoBehaviour {
 
 	public void RemoveMsg(string msg) {
 		textUI.StartCoroutine(textUI.FadeText(false));
-	}	
+	}
+
+	public void SetMusic(int choice, bool choice2) {
+		if (choice == 1)
+			audio[choice].clip = run;
+		else if (choice == 0) {
+			if (choice2)
+				audio[choice].clip = normal;
+			else
+				audio[choice].clip = alarm;
+			if (music_playing[choice] != choice2)
+				audio[choice].Stop();
+			music_playing[choice] = choice2;
+		}
+		else if (choice == 2) {
+			AudioSource[] audio_cam_end = camWinLoose.gameObject.GetComponents<AudioSource>();
+			audio_cam_end[0].Play();
+			audio_cam_end[1].Play();
+		}
+		else if (choice == 3) {
+			if (choice2)
+				audio[choice].clip = door;
+			else
+				audio[choice].clip = pick;
+		}
+		if (!audio[choice].isPlaying && choice < 2)
+			audio[choice].Play();
+		if (choice >= 2) {
+			audio[choice].Stop();
+			audio[choice].PlayOneShot(audio[choice].clip);
+		}
+	}
 }

@@ -21,8 +21,6 @@ public class MovePlayer : MonoBehaviour {
         Vector3 vec = _cam.ScreenToViewportPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, _cam.nearClipPlane));
         float newRotationX = Camera.main.transform.localEulerAngles.x - Input.GetAxis("Mouse Y") * speed;
         Camera.main.transform.localRotation = Quaternion.Euler(newRotationX + _cameraOffset.x, _cameraOffset.y, _cameraOffset.z);
-
-
         float newRotationY = Input.GetAxis("Mouse X") * (speed);
         transform.Rotate(0, newRotationY, 0);
     }
@@ -36,12 +34,11 @@ public class MovePlayer : MonoBehaviour {
 		if (Input.GetKey(KeyCode.LeftShift) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))) {
 			forward *= speed;
 			SliderControl.sld.slider.value += Time.deltaTime * 0.3f;
+			GameManager.gm.SetMusic(1, true);
 		}
 		else
 			forward *= speed / 3;
 		forward.y = -9.81f;
 		cc.Move(forward * Time.deltaTime);
 	}
-
-
 }
