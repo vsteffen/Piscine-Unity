@@ -1,0 +1,263 @@
+fileFormatVersion: 2
+guid: c78068908f8aadb45a12635af21fcb1d
+timeCreated: 1432915458
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: b_MF_Armor_Crotch
+    100004: b_MF_Armor_Sho_L
+    100006: b_MF_Armor_Sho_R
+    100008: b_MF_Armroll_L
+    100010: b_MF_Armroll_R
+    100012: b_MF_Attach
+    100014: b_MF_BackMount_L
+    100016: b_MF_BackMount_R
+    100018: b_MF_Calf_L
+    100020: b_MF_Calf_R
+    100022: b_MF_Camera
+    100024: b_MF_Camera_Root
+    100026: b_MF_Clavicle_L
+    100028: b_MF_Clavicle_R
+    100030: b_MF_Face
+    100032: b_MF_Finger_01_L
+    100034: b_MF_Finger_01_R
+    100036: b_MF_Finger_02_L
+    100038: b_MF_Finger_02_R
+    100040: b_MF_Finger_03_L
+    100042: b_MF_Finger_03_R
+    100044: b_MF_Finger_04_L
+    100046: b_MF_Finger_04_R
+    100048: b_MF_Finger_05_L
+    100050: b_MF_Finger_05_R
+    100052: b_MF_Finger_06_L
+    100054: b_MF_Finger_06_R
+    100056: b_MF_Finger_07_L
+    100058: b_MF_Finger_07_R
+    100060: b_MF_Finger_08_L
+    100062: b_MF_Finger_08_R
+    100064: b_MF_Finger_09_L
+    100066: b_MF_Finger_09_R
+    100068: b_MF_Finger_10_L
+    100070: b_MF_Finger_10_R
+    100072: b_MF_Finger_11_L
+    100074: b_MF_Finger_11_R
+    100076: b_MF_Finger_12_L
+    100078: b_MF_Finger_12_R
+    100080: b_MF_Foot_L
+    100082: b_MF_Foot_R
+    100084: b_MF_Forearm_L
+    100086: b_MF_Forearm_R
+    100088: b_MF_ForeTwist2_L
+    100090: b_MF_ForeTwist2_R
+    100092: b_MF_Hair_2
+    100094: b_MF_Hair_3
+    100096: b_MF_Hand_L
+    100098: b_MF_Hand_R
+    100100: b_MF_Head
+    100102: b_MF_IK_Foot_L
+    100104: b_MF_IK_Foot_R
+    100106: b_MF_IK_Foot_Root
+    100108: b_MF_IK_Gun
+    100110: b_MF_IK_Hand_L
+    100112: b_MF_IK_Hand_R
+    100114: b_MF_IK_Hand_Root
+    100116: b_MF_jaw
+    100118: b_MF_Neck
+    100120: b_MF_Pelvis
+    100122: b_MF_Root
+    100124: b_MF_Spine_01
+    100126: B_MF_Spine_02
+    100128: b_MF_Spine_03
+    100130: b_MF_Strap_1
+    100132: b_MF_Thigh_L
+    100134: b_MF_Thigh_R
+    100136: b_MF_Thumb_01_L
+    100138: b_MF_Thumb_01_R
+    100140: b_MF_Thumb_02_L
+    100142: b_MF_Thumb_02_R
+    100144: b_MF_Thumb_03_L
+    100146: b_MF_Thumb_03_R
+    100148: b_MF_Toe_L
+    100150: b_MF_Toe_R
+    100152: b_MF_UpperArm_L
+    100154: b_MF_UpperArm_R
+    100156: b_MF_Weapon_L
+    100158: b_MF_Weapon_L_End
+    100160: b_MF_Weapon_R
+    100162: b_MF_Weapon_R_End
+    100164: //RootNode
+    100166: Lambent_Female
+    400000: Armature
+    400002: b_MF_Armor_Crotch
+    400004: b_MF_Armor_Sho_L
+    400006: b_MF_Armor_Sho_R
+    400008: b_MF_Armroll_L
+    400010: b_MF_Armroll_R
+    400012: b_MF_Attach
+    400014: b_MF_BackMount_L
+    400016: b_MF_BackMount_R
+    400018: b_MF_Calf_L
+    400020: b_MF_Calf_R
+    400022: b_MF_Camera
+    400024: b_MF_Camera_Root
+    400026: b_MF_Clavicle_L
+    400028: b_MF_Clavicle_R
+    400030: b_MF_Face
+    400032: b_MF_Finger_01_L
+    400034: b_MF_Finger_01_R
+    400036: b_MF_Finger_02_L
+    400038: b_MF_Finger_02_R
+    400040: b_MF_Finger_03_L
+    400042: b_MF_Finger_03_R
+    400044: b_MF_Finger_04_L
+    400046: b_MF_Finger_04_R
+    400048: b_MF_Finger_05_L
+    400050: b_MF_Finger_05_R
+    400052: b_MF_Finger_06_L
+    400054: b_MF_Finger_06_R
+    400056: b_MF_Finger_07_L
+    400058: b_MF_Finger_07_R
+    400060: b_MF_Finger_08_L
+    400062: b_MF_Finger_08_R
+    400064: b_MF_Finger_09_L
+    400066: b_MF_Finger_09_R
+    400068: b_MF_Finger_10_L
+    400070: b_MF_Finger_10_R
+    400072: b_MF_Finger_11_L
+    400074: b_MF_Finger_11_R
+    400076: b_MF_Finger_12_L
+    400078: b_MF_Finger_12_R
+    400080: b_MF_Foot_L
+    400082: b_MF_Foot_R
+    400084: b_MF_Forearm_L
+    400086: b_MF_Forearm_R
+    400088: b_MF_ForeTwist2_L
+    400090: b_MF_ForeTwist2_R
+    400092: b_MF_Hair_2
+    400094: b_MF_Hair_3
+    400096: b_MF_Hand_L
+    400098: b_MF_Hand_R
+    400100: b_MF_Head
+    400102: b_MF_IK_Foot_L
+    400104: b_MF_IK_Foot_R
+    400106: b_MF_IK_Foot_Root
+    400108: b_MF_IK_Gun
+    400110: b_MF_IK_Hand_L
+    400112: b_MF_IK_Hand_R
+    400114: b_MF_IK_Hand_Root
+    400116: b_MF_jaw
+    400118: b_MF_Neck
+    400120: b_MF_Pelvis
+    400122: b_MF_Root
+    400124: b_MF_Spine_01
+    400126: B_MF_Spine_02
+    400128: b_MF_Spine_03
+    400130: b_MF_Strap_1
+    400132: b_MF_Thigh_L
+    400134: b_MF_Thigh_R
+    400136: b_MF_Thumb_01_L
+    400138: b_MF_Thumb_01_R
+    400140: b_MF_Thumb_02_L
+    400142: b_MF_Thumb_02_R
+    400144: b_MF_Thumb_03_L
+    400146: b_MF_Thumb_03_R
+    400148: b_MF_Toe_L
+    400150: b_MF_Toe_R
+    400152: b_MF_UpperArm_L
+    400154: b_MF_UpperArm_R
+    400156: b_MF_Weapon_L
+    400158: b_MF_Weapon_L_End
+    400160: b_MF_Weapon_R
+    400162: b_MF_Weapon_R_End
+    400164: Lambent_Female
+    400166: //RootNode
+    4300000: Lambent_Female
+    9500000: //RootNode
+    13700000: Lambent_Female
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LambentFemale__Lambent_Female_D_tga
+    second: {fileID: 2100000, guid: 2c733da6d6b27fe4f9356b566a43df7d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 50
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
